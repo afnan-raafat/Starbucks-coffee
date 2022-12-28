@@ -1,0 +1,33 @@
+/* for the root colors  */
+:root
+{
+    --main-color:#1e3932;
+    --second-color:#00754a;
+    --main-pink-color:#d40031;
+    --main-gray-color:#1e3932;
+    --pail-text:#e5e5e5;
+}
+
+/* end the root colors  */
+/* start the nav syling  */
+.nav-bar .nav-logo img
+{
+    width: 50px;
+}
+/* end  the nav syling  */
+
+/* start the styling for the main section  */
+.main-section
+{
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+.main-section .left-section
+{
+  
+}
+.main-section .right-section
+{
+  
+}
+/* end  the styling for the main section  */

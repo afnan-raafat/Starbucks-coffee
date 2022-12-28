@@ -1,0 +1,235 @@
+/* for the root colors  */
+:root
+{
+    --main-color:#1e3932;
+    --second-color:#00754a;
+    --main-pink-color:#d40031;
+    --main-gray-color:#1e3932;
+    --pail-text:#e5e5e5;
+}
+
+/* end the root colors  */
+/* start the nav syling  */
+.nav-bar .nav-logo img
+{
+    width: 50px;
+}
+/* end  the nav syling  */
+
+/* start the form box style  */
+/* this is the general classes of the form  */
+.form-collectopn
+{
+    margin: 40px auto 0px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    max-width: 400px;
+    color: black;
+}
+.form-collectopn .form-box
+{
+    margin-top: 60px;
+    box-shadow: 0 0 6px rgb(0 0 0 / 24%), 0 8px 12px rgb(0 0 0 / 14%);
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+}
+ .input-fields
+{
+    display: flex;
+    flex-flow: column;
+    margin: 0px auto;
+    max-width: 95%;
+}
+.field
+{
+    padding: 10px 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    border: 1px solid black;
+}
+.error-msg
+{
+    align-self: flex-start;
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    text-transform: capitalize;
+}
+/* start the specila classes for the erro and success  */
+.success
+{
+    border-color: #2ecc71;
+}
+.error
+{
+    border-color: #e74c3c;
+}
+.error-msg
+{
+    align-self: flex-start;
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 12px;
+    visibility: hidden;
+}
+.success-msg
+{
+    color: #2ecc71 ;
+}
+.show-err
+{
+    visibility: visible;
+}
+/* end the specila classes for the erro and success  */
+ .p-form-bx
+{
+    align-self: flex-start;
+    margin-bottom: 20px;
+}
+ .spn-p-form-bx
+{
+    color: green;
+}
+ .extra-text
+{
+    color: black;
+    display: flex;
+    align-items: center;
+    max-width: 95%;
+    margin: 0px auto;
+}
+.ch-bx-sign-in
+{
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+}
+/* here will be a style  */
+.ch-bx-sign-in
+{
+    position: relative;
+    margin-right: 15px;
+}
+
+ .extra-text a
+{
+    text-decoration: underline;
+    color: var(--second-color);
+    font-weight: bold;
+}
+ .form-links
+{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 19px;
+    margin-top: 20px;
+}
+ .form-links a
+{
+    color: var(--second-color);
+    text-decoration: underline;
+    font-weight: bold;
+}
+ .btn-sign-bx
+{
+
+margin-top: 50px;
+margin-bottom: 10px;
+display: flex;
+justify-content: flex-end;
+}
+
+ .btn
+{
+
+padding: 10px;
+border-radius: 50px;
+border: none;
+background-color: var(--second-color);
+color: white;
+text-align: center;
+font-weight: bold;
+font-size: 19px;
+overflow: hidden;
+box-shadow: 0 0 6px rgb(0 0 0 / 24%), 0 8px 12px rgb(0 0 0 / 14%);
+}
+.btn a
+{
+    color: white;
+}
+/* end the form box style  */
+
+/* end the special styling  */
+/* start the sign-in card  */
+.sign-in-card 
+{
+    margin-top: 30px;
+    text-align: center;
+    background-color: #f1f8f5;
+    width: 100%;
+    padding: 20px 30px;
+}
+.sign-in-card .sign-in-h
+{
+    margin: 0;
+    margin-bottom: 20px;
+    color: var(--second-color);
+}
+.sign-in-card .sign-in-card-p
+{
+    margin: 0px auto;
+    max-width: 85%;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 1.8;
+}
+.sign-in-card .sign-in-card-btn
+{
+    margin-top: 20px;
+    padding: 10px 18px;
+    background-color: inherit;
+    color: var(--second-color);
+    font-size: 14px;
+    border: 1px solid var(--second-color);
+} 
+/* end the general styling  */
+
+
+/*start  the emdia query for the form  */
+
+/* some special stying for the footer  */
+.footer
+{
+    padding: 30px 0px 10px;
+}
+
+@media(max-width:767px)
+{
+    .footer
+    {
+        margin-left: 0;
+    }
+  .form-collectopn
+  {
+    max-width: 400px;
+
+  }  
+  .sign-in-card 
+  {
+    max-width: 95%;
+    margin-left:auto;
+    margin-right: auto;
+  }
+}
+/* end the media query for the form  */
+
+/* end the sign-in card  */

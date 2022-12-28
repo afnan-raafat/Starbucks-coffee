@@ -1,0 +1,741 @@
+/* start the globale rules  */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root
+{
+    --main-color:#1e3932;
+    --second-color:#006241;
+    --main-pink-color:#d40031;
+    --main-gray-color:#1e3932;
+    --pail-text:#e5e5e5;
+}
+html,body
+{
+    font-family: 'Cairo', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+    line-height: 1.5;
+    color: black;
+    scroll-behavior: smooth;
+}
+/* globale style for the main parts of he page  */
+p{
+    margin: 5px 0px;
+    line-height: 1.7;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+/* end the globale rules for the whole page  */
+/* for the white links on the main boxes  */
+.box a
+{
+    color: white;
+}
+/* for the white button in each box  */
+.box .btn-white
+{
+    margin-top:20px;
+    color: white;
+    border-color: white;
+}
+/* img rules for responsive img */
+.box img
+{
+    max-width: 100%;
+    height: auto;
+}
+/* inner boxes text  */
+.text-center
+{
+   text-align: center;
+}
+/* start text sizes */
+.text-very-big
+{
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+/* the default one for the main heading  */
+.text-big
+{
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.text-medium
+{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.text-small
+{
+    font-size: 19px;
+    margin-bottom: 20px; 
+}
+/* end text sizes */
+
+/* start the background colors for the boxes */
+.bg-main-color
+{
+    background-color: var(--main-color);
+    color: white;
+}
+.bg-second-color
+{
+    background-color: var(--second-color);
+    color: white;
+}
+.bg-main-pink-color
+{
+    background-color: var(--main-pink-color);
+    color: white;
+}
+
+.bg-main-gray-color
+{
+    background-color: var(--main-gray-color);
+    color: white;
+}
+/* end the background colors for the boxes */
+
+/* start the main box style  */
+.box
+{
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+/* end the main box style  */
+
+/* the inner box of the text content for the medium media like tablets  */
+.box-in
+{
+    max-width: 700px;
+    margin: 0 auto;
+}
+/* the text in the boxes */
+.box-text
+{
+    max-width: 500px;
+    text-align: center;
+    justify-self: center;
+    padding: 20px 0px;
+}
+
+
+/* grid styles  */
+
+/* start the main boxes grid styles  */
+.grid-box
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.grid-box-img-first :first-child
+{
+ order: 2;
+}
+
+/* end the main boxes grid syles */
+
+/* start the footer grid style for large screens */
+.footer-five-col
+{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 90px;
+}
+/* end the footer grid style for large screens  */
+
+/* end the grid styles */
+
+/* start the icon styling  */
+.icon
+{
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    z-index: 5;
+    transform: all .3s;
+    display: none;
+}
+.icon span
+{
+position: absolute;
+top: 0;
+left: 0;
+width: 24px;
+height: 2px;
+background-color: black;
+transform: rotate(0);
+transition: all .5s;
+}
+/* making the style when it is closed */
+.icon span:nth-child(2)
+{
+transform: translateY(7px);
+}
+.icon span:last-child
+{
+transform: translateY(14px);
+}
+
+/* making the style when it is opend */
+.closed-style.icon span:nth-child(1)
+{
+    /* translate the quarter of it's width  */
+transform: rotate(45deg) translateX(6px) translateY(6px);
+}
+.closed-style.icon span:nth-child(2)
+{
+    display: none;
+}
+.closed-style.icon span:nth-child(3)
+{
+    transform: rotate(-45deg) translateX(-6px) translateY(6px);
+
+}
+/* end the icon styling  */
+/* end the globale syling */
+
+/* start the media  for the whole content  */
+
+/* the first media for the large screens more than 14 inch */
+/* to have a container without making one :) */
+@media (max-width:1440px)
+{
+.box
+{
+max-width: 1440px;
+margin-left: auto;
+margin-right: auto;
+}
+}
+
+/* the media for the fonts  */
+@media (max-width:960px)
+{
+    .text-very-big
+    {
+        font-size: 35px;
+    }
+    .text-big
+    {
+        font-size: 25px;
+    }
+    .text-medium
+    {
+        font-size: 19px;
+    }
+}
+
+/* start the media for responsive on mobiles */
+@media (max-width : 767px)
+{
+    .grid-box
+    {
+        grid-template-columns: 1fr;
+    }
+    .nav-bar  img 
+    {
+        margin-left: -15px;
+
+    }
+    .grid-box-img-first :first-child
+    {
+       order: 0;
+    }
+    .nav-bar .nav-left,
+    .nav-bar .nav-right
+    {
+        display: none;
+    }
+    .footer-main-info-box
+    {
+        display: none;
+    }
+    .icon
+    {
+        display: block;
+    }
+  
+}
+/* end the media for responsive on mobiles */
+
+/* end the media for the whole content  */
+
+/* start the nave bar  */
+.nav-bar
+{
+width: 100%;
+height: auto;
+background-color: white;
+padding: 20px;
+box-shadow: 0px 1px 3px rgb(0 0 0 /10%),
+0px 2px 2px rgb(0 0 0 /6%),
+0px 0px 2px rgb(0 0 0 / 7%);
+}
+.nav-bar .container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1444px;
+}
+.nav-bar ul
+{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+.nav-bar li
+{
+    margin: 0px 15px;
+    font-weight: bold;
+}
+.nav-bar a:hover 
+{
+    color: var(--second-color);
+}
+.nav-bar .nave-logo img
+{
+    width: 50px;
+    height: 50px;
+}
+.nav-bar .nav-left
+{
+    flex: 1;
+    margin-left: 20px;
+}
+.btn-white,.btn-black
+{
+    cursor: pointer;
+    display: inline-block;
+    background: none;
+    border: 1px solid black;
+    border-radius: 50px;
+    padding: 7px 16px;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+.btn-white:hover
+{
+    background-color: #0000000f;
+}
+.btn-black
+{
+    background-color: black;
+    color: white;
+}
+.btn-black:hover
+{
+    background-color: #333;
+}
+.nav-bar .nav-right i
+{
+    font-size: 20px;
+}
+.nav-bar .nav-right li:nth-child(2)
+{
+    margin: 0px 5px;
+}
+/* end the nave bar  */
+
+/* start the meduim-small-menue  */
+.meduim-small-menue
+{
+    transition: all .3s;
+    position: absolute;
+    top: 85px;
+    right: 0;
+    background-color: white;
+    height: 100%;
+    width: 90%;
+    padding: 30px;
+    color: black;
+    box-shadow: 0px 4px 3px -3px rgb(0 0 0 /10%) inset,
+    0px 4px 2px -2px rgb(0 0 0 / 7%) inset;
+}
+.meduim-small-menue ul
+{
+    line-height: 4;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #777;
+}
+.meduim-small-menue ul li a
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+.meduim-small-menue a:not(.special)
+{
+    margin-top: 30px;
+    display: block;
+    font-size: 20px;
+}
+.meduim-small-menue a:hover
+{
+    color: var(--second-color);
+}
+/* start the styling for the invisable icon  */
+.invisable
+{
+    transform: translateX(100%);
+}
+/* end the styling for the invisable icon  */
+/* start the extra syling in the page  */
+/* for the up button  */
+.up-btn
+{
+    position: fixed;
+    bottom: 10px;
+    right: -70px;
+    z-index: 5;
+    background-color: var(--second-color);
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s;
+    box-shadow: 0px 4px 3px -3px rgb(0 0 0 /10%) inset,
+    0px 4px 2px -2px rgb(0 0 0 / 7%) inset;
+    opacity: .3;
+}
+.up-btn.return
+{
+  right: 10px;
+}
+.catch-overflow
+{
+    overflow: hidden;
+}
+.opacity-went
+{
+    opacity: 1;
+}
+/* end the up boutton  */
+
+
+/* for the time passed  */
+.time-passed
+{
+
+    cursor: pointer;
+    width: 130px;
+    height: 50px;
+    background-color: var(--second-color);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5px;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    transition: all .2s;
+    z-index: 5;
+}
+.time-passed.blure
+{
+    opacity: .3;
+}
+.time-passed.hide
+{
+left: -130px;
+}
+.time-passed span
+{
+    display: inline-block;
+    background-color: var(--main-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* end the meduim-small-menue  */
+/* start the fun box  */
+.hello-hack-potato
+{
+    width: 300px;
+    height: auto;
+    padding: 5px;
+    background-color: var(--main-pink-color);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    right:-300px;
+    border-radius: 5px;
+    transition: all .3s;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    z-index: 10;
+    text-transform: capitalize;
+}
+.move-now
+{
+    animation-name: moveToleft;
+}
+/* making the animation for the fun box  */
+@keyframes  moveToleft
+{
+    
+    0%{
+        right:0;
+    }
+    50%
+    {
+        right: 40%;
+        opacity: .5;
+    }
+    100%
+    {
+        right: 100%;
+        opacity: .1;
+    }
+
+}
+/* end the funny box  */
+/* end the extra styling for the website  */
+/* start the branding info  */
+.branding-raw
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   flex-flow: column;
+    margin-bottom: 20px;
+    font-size: 12px;
+
+}
+.branding-raw .section
+{
+    max-width: 500px;
+}
+.branding-raw .section:not(:last-child)
+{
+    margin-bottom: 30px;
+}
+
+/* end the branding info  */
+/* start the  links list  */
+.lists
+{
+    margin-top: 30px;
+    padding: 30px 20px;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 30px;
+    box-shadow: 0 0 6px rgb(0 0 0 / 24%), 0 0px 0px rgb(0 0 0 / 14%);
+  
+}
+.lists .list-box
+{
+max-width: 100%;
+overflow: hidden;
+}
+.lists .list-box .list-header
+{
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    transition: all .3s;
+}
+.lists .list-box .list-header h3
+{
+margin: 0;
+font-size: 13px;
+font-family: system-ui;
+}
+.lists .list-box .list-header span
+{
+visibility: hidden;
+cursor: pointer;
+}
+.lists .list-box .list-header span i
+{
+    transition: all .3s;
+}
+.lists .list-box .list-data
+{
+max-height: 100%;
+overflow: hidden;
+}
+.lists .list-box .list-data ul
+{
+display: flex;
+flex-flow: column;
+}
+.lists .list-box .list-data li a
+{
+font-size: 16px;
+color: #333;
+font-weight: bold;
+}
+
+/* start the media for the lists  */
+@media(max-width:820px)
+{
+    .lists
+    {
+        grid-template-columns: 1fr;
+    }
+    .lists .list-box
+    {
+        width: 100%;
+        transition: all 1s;
+        height: 28px;
+    }
+    .lists .list-box .list-header span
+    {
+        visibility: visible;
+        margin-right: 25px;
+    }
+    .lists .list-box .list-data
+    {
+        transform: translateY(160%);
+        transition: all 1s;
+    }
+   
+}
+
+/* end the media for the lists  */
+
+/* start the moving styling */
+
+.max-height
+{
+    transform: translateY(0%) !important;
+  
+}
+.resize
+{
+    height: auto !important;
+}
+.rotate
+{
+    transform: rotate(180deg);
+}
+
+
+/* end the moving styling  */
+/* end the links list  */
+
+.footer
+{
+    position: relative;
+    margin-top: 0px;
+    padding: 20px;
+    box-shadow: 0px 1px 3px rgb(0 0 0 /10%),
+    0px 2px 2px rgb(0 0 0 /6%),
+    0px 0px 2px rgb(0 0 0 / 7%);
+}
+.footer::before
+{
+    content: '';
+    width: 95%;
+    height: 1px;
+    background-color: var(--pail-text);
+    position: absolute;
+    top: 0;
+    left: 2.5%;
+}
+.footer .foot-icons
+{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.footer .foot-icons ul
+{
+display: flex;
+}
+.footer .foot-icons ul li
+{
+    margin: 0px 5px;
+}
+.footer .foot-icons ul li a i
+{
+    font-size: 25px;
+    color: #202124;
+}
+.footer-data
+{
+    margin-left: 10px;
+}
+.footer-data .foot-links
+{
+display: flex;
+}
+.footer a
+{
+    font-size: 14px;
+    color: black;
+    margin: 10px;
+    position: relative;
+}
+.footer p
+{
+    color: #777;
+    font-size: 14px;
+}
+.footer a:not(:last-child)::after
+{
+    content: '';
+    width: 1px;
+    height: 80%;
+    position: absolute;
+    right: -10px;
+    top: 10%;
+    background-color: #444;
+}
+/* start the media query for the fotter section  */
+
+@media(max-width:818px)
+{
+
+    .footer-data .foot-links
+    {
+        display: flex;
+        flex-flow: column;
+    }
+    .footer-data .foot-links a 
+    {
+        margin-bottom: 0px;
+    }
+    .footer a:not(:last-child)::after
+    {
+        display: none;
+    }
+}
+
+/* end the media qrery for the footer section  */
+/* end the footer data for the style  */
