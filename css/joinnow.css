@@ -1,0 +1,159 @@
+
+:root
+{
+    --main-color:#1e3932;
+    --second-color:#00754a;
+    --main-pink-color:#d40031;
+    --main-gray-color:#1e3932;
+    --pail-text:#e5e5e5;
+}
+.form-collectopn 
+{
+ max-width: 600px;
+}
+@media(max-width:767px)
+{
+    .container
+    {
+        min-width: 100%;
+    }
+    .box p
+    {
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .box h3
+    {
+        font-size: 16px;
+    }
+   .general-heading 
+   {
+   font-size: 14px !important;
+   margin-bottom: 15px;
+   }
+}
+
+.container
+{
+    width: 80%;
+    margin: 0px auto;
+    padding: 0px 5px;
+}
+.form-collectopn .sub-details
+{
+    padding: 40px 0px 0px;
+    text-align: center;
+    max-width: 90%;
+    margin: 0px auto;
+}
+.form-collectopn .sub-details h3
+{
+margin: 0;
+margin-bottom: 20px;
+font-size: 18px;
+color: #777;
+}
+.form-collectopn .sub-details p
+{
+color: #333;
+line-height: 1.7;
+}
+.form-collectopn .main-form-container
+{
+    max-width: 600px;
+}
+.input-fields
+{
+    margin-top: 30px;
+}
+.field
+{
+    width: 100%;
+    padding: 18px 15px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.form-heading
+{
+    align-self: flex-start;
+    margin: 0;
+    margin-bottom: 30px;
+}
+.email-feild-footer
+{
+    align-self: flex-start;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.raw-content
+{
+    max-width: 85%;
+    line-height: 1.5;
+    align-self: flex-start;
+    font-weight: bold;
+    text-align: left;
+}
+.general-heading
+{
+   align-self: flex-start;
+}
+.join-now-heading
+{
+color: var(--second-color);
+display: flex;
+align-items: center;
+justify-content: space-around;
+}
+.join-now-heading a
+{
+    color: var(--second-color);
+    text-decoration: underline;
+}
+.join-now-heading i
+{
+    margin-left: 10px;
+}
+.mid
+{
+    color: #777;
+    font-weight: bold;
+}
+.p-join-now
+{
+    text-align: left;
+}
+.chk-bx
+{
+    display: block;
+   width: 30px;
+   height: 30px;
+   margin-top: 40px;
+}
+.confirmation
+{
+    margin-top: -20px;
+    display: flex;
+    flex-flow: row;
+    max-width: 100%;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+.confirmation .confirm-text
+{
+    flex: 1;
+    margin-left: 15px;
+}
+.confirmation .confirm-text p
+{
+    text-align: left;
+}
+.terms a
+{
+text-decoration: underline;
+color: var(--second-color);
+font-weight: 600;
+}
+.join-now-btn
+{
+padding: 20px 20px;
+}
